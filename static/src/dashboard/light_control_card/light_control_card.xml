@@ -14,7 +14,7 @@
                         role="switch"
                         t-att-checked="props.isOn"
                         t-att-disabled="props.disabled || props.isBusy"
-                        t-on-change="props.onToggle"
+                        t-on-click="props.onToggle"
                     />
                 </div>
         </div>

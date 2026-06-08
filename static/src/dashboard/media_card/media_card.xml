@@ -6,12 +6,13 @@
 				<t t-if="state.isPlaying">
 					<div class="position-relative">
 						<button class="btn btn-sm btn-outline-light position-absolute top-0 end-0 m-2" t-on-click="onStop">Stop</button>
-						<iframe
+						<video
 							t-att-src="props.url"
-							t-att-title="props.title || 'Media Stream'"
-							t-att-style="'width:100%;height:' + (props.height || '360px') + ';border:0;'"
-							allow="fullscreen; picture-in-picture"
-							loading="lazy"
+							t-att-style="'width:100%;height:' + (props.height || '360px') + ';display:block;'"
+							autoplay="1"
+							muted="1"
+							playsinline="1"
+							controls="1"
 						/>
 					</div>
 				</t>
