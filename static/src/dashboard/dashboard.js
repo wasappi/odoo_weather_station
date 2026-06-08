@@ -65,12 +65,12 @@ export class WarehouseMonitoringDashboard extends Component {
     }
 
     async onToggleLight(ev) {
+        ev.preventDefault(); // Prevent browser toggle — OWL controls checkbox state via isOn
         if (!this.currentStation.id || !this.currentStation.ip_address || this.light.isBusy) {
-            ev.preventDefault();
             return;
         }
 
-        const nextState = ev.target.checked;
+        const nextState = !this.light.isOn;
         this.light.isOn = nextState;
         this.light.isBusy = true;
 
