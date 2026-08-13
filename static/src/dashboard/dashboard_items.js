@@ -17,7 +17,7 @@ dashboardRegistry.add("latest_temp", {
         title: "Current temperature",
         value: stats.latest_temp ? stats.latest_temp.value : "—",
         unit: stats.latest_temp ? stats.latest_temp.unit : "",
-        date: stats.latest_temp ? stats.latest_temp.date : null,
+        date: stats.latest_temp ? String(stats.latest_temp.date) : "",
         icon: "fa fa-thermometer-half",
     }),
 });
@@ -31,7 +31,7 @@ dashboardRegistry.add("latest_hum", {
         title: "Current humidity",
         value: stats.latest_hum ? stats.latest_hum.value : "—",
         unit: stats.latest_hum ? stats.latest_hum.unit : "",
-        date: stats.latest_hum ? stats.latest_hum.date : null,
+        date: stats.latest_hum ? String(stats.latest_hum.date) : undefined,
         icon: "fa fa-tint",
     }),
 });
@@ -45,7 +45,7 @@ dashboardRegistry.add("latest_press", {
         title: "Current pressure",
         value: stats.latest_press ? stats.latest_press.value : "—",
         unit: stats.latest_press ? stats.latest_press.unit : "",
-        date: stats.latest_press ? stats.latest_press.date : null,
+        date: stats.latest_press ? String(stats.latest_press.date) : undefined,
         icon: "fa fa-tachometer",
     }),
 });
@@ -59,7 +59,7 @@ dashboardRegistry.add("latest_co2", {
         title: "Current CO2",
         value: stats.latest_co2 ? stats.latest_co2.value : "—",
         unit: stats.latest_co2 ? stats.latest_co2.unit : "",
-        date: stats.latest_co2 ? stats.latest_co2.date : null,
+        date: stats.latest_co2 ? String(stats.latest_co2.date) : undefined,
         icon: "fa fa-industry",
     }),
 });
